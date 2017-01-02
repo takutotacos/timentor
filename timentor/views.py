@@ -65,12 +65,12 @@ def new_todo_child(request, task_date, task_no):
                                        time_end_hour=cd['time_end_hour'], time_end_min=cd['time_end_min'],
                                        classification=cd['classification'], parent_task=daily_task_with_task_no)
                 child_task.save()
+                return HttpResponseRedirect(reverse('timentor:list_daily_task_edit', args=(task_date, task_no)))
         else:
-            print(formset.errors)
+            messages.error(request, "You have something wrong with the tasks you made")
+            return HttpResponseRedirect(reverse('timentor:new_todo_child'))
     else:
-        formset = ChildTaskFormSet(initial=[
-            {'parent_task': daily_task_with_task_no.id},
-        ])
+        formset = ChildTaskFormSet()
     return render(request, 'timentor/new_todo_child.html', {
         'formset': formset,
         'parent_task': daily_task_with_task_no,
@@ -88,5 +88,12 @@ def list_daily_edit(request, task_date):
 
 def list_daily_task_edit(request, task_date, task_no):
     task_date_string = task_date[:4] + "/" + task_date[4:6] + "/" + task_date[6:]
-    daily_child_task = get_list_or_404(ParentTask, task_date=task_date_string, task_no=task_no)
-    return render(request, 'timentor/list_daily_task_edit.html', {'task': daily_child_task})
+    daily_task = get_object_or_404(ParentTask, task_date=task_date_string, task_no=task_no)
+    daily_child_task = get_list_or_404(ChildTask, parent_task=daily_task)
+    print(daily_child_task)
+    print("The one below is the parent task")
+    print(daily_task)
+    return render(request, 'timentor/list_daily_task_edit.html', {
+        'child_tasks': daily_child_task,
+        'parent_task': daily_task
+    })
