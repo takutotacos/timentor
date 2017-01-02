@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+      <table>
+            <tbody>
+                <tr>
+                    <td>Task Date</td>
+                    <td>No.</td>
+                    <td>Task Name</td>
+                    <td>Time</td>
+                    <td>From(Hour)</td>
+                    <td>From(Min)</td>
+                    <td>To(Hour)</td>
+                    <td>To(Min)</td>
+                </tr>
+                {% for task in daily_tasks %}
+                <tr>
+                    <td>{{ task.task_date }}</td>
+                    <td>{{ task.task_no }}</td>
+                    <td>{{ task.task_name }}</td>
+                    <td>{{ task.time }}</td>
+                    <td>{{ task.time_start_hour }}</td>
+                    <td>{{ task.time_start_min }}</td>
+                    <td>{{ task.time_end_hour }}</td>
+                    <td>{{ task.time_end_min }}</td>
+                    <td><a href="{% url 'timentor:new_todo_child' task_date task.task_no %}">
+                        Add child task</a></td>
+                </tr>
+                {% endfor %}
+            </tbody>
+      </table>
+</body>
+</html>
