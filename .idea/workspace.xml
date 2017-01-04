@@ -2,15 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="41c9c34c-df37-4498-87df-8e4f9b42ea41" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/timentor/static/timentor/js/change_time.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/timentor/static/timentor/jquery.formset.js" afterPath="$PROJECT_DIR$/timentor/static/timentor/js/jquery.formset.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db.sqlite3" afterPath="$PROJECT_DIR$/db.sqlite3" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/timentor/forms.py" afterPath="$PROJECT_DIR$/timentor/forms.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/timentor/models.py" afterPath="$PROJECT_DIR$/timentor/models.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/timentor/templates/timentor/list_daily_edit.html" afterPath="$PROJECT_DIR$/timentor/templates/timentor/list_daily_edit.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/timentor/templates/timentor/list_daily_task_edit.html" afterPath="$PROJECT_DIR$/timentor/templates/timentor/list_daily_task_edit.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/timentor/templates/timentor/common/base.html" afterPath="$PROJECT_DIR$/timentor/templates/timentor/common/base.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/timentor/templates/timentor/new_todo_child.html" afterPath="$PROJECT_DIR$/timentor/templates/timentor/new_todo_child.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/timentor/templates/timentor/new_todo_parent.html" afterPath="$PROJECT_DIR$/timentor/templates/timentor/new_todo_parent.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/timentor/urls.py" afterPath="$PROJECT_DIR$/timentor/urls.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/timentor/views.py" afterPath="$PROJECT_DIR$/timentor/views.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -26,95 +25,13 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/timentor/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="16" column="18" lean-forward="true" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="18" />
+            <state relative-caret-position="-238">
+              <caret line="68" column="32" lean-forward="true" selection-start-line="68" selection-start-column="32" selection-end-line="68" selection-end-column="32" />
               <folding>
                 <element signature="e#0#35#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main_child_task.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/timentor/templates/timentor/main_child_task.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="34" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/timentor/templates/timentor/main.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="19" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="list_daily_edit.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/timentor/templates/timentor/list_daily_edit.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="15" column="33" lean-forward="false" selection-start-line="15" selection-start-column="33" selection-end-line="15" selection-end-column="33" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="base.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/timentor/templates/timentor/common/base.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" column="24" lean-forward="false" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="list_daily_task_edit.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/timentor/templates/timentor/list_daily_task_edit.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="34" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="new_todo_child.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/timentor/templates/timentor/new_todo_child.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="281">
-              <caret line="83" column="0" lean-forward="false" selection-start-line="83" selection-start-column="0" selection-end-line="83" selection-end-column="14" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="new_todo_parent.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/timentor/templates/timentor/new_todo_parent.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="18" column="38" lean-forward="true" selection-start-line="18" selection-start-column="38" selection-end-line="18" selection-end-column="38" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/timentor/models.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="32" column="0" lean-forward="true" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
-              <folding>
-                <element signature="e#0#28#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -146,6 +63,13 @@
       <find>datetime.now</find>
       <find>(Hour)</find>
       <find>_hour</find>
+      <find>add-row</find>
+      <find>void</find>
+      <find>#</find>
+      <find>addButton</find>
+      <find>v</find>
+      <find>console.lo</find>
+      <find>console.lgo</find>
     </findStrings>
     <replaceStrings>
       <replace>parent_task.</replace>
@@ -157,25 +81,29 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/timentor/templates/timentor/common/base.html" />
         <option value="$PROJECT_DIR$/timentor/urls.py" />
-        <option value="$PROJECT_DIR$/timentor/forms.py" />
         <option value="$PROJECT_DIR$/timentor/templates/timentor/main_child_task.html" />
-        <option value="$PROJECT_DIR$/timentor/views.py" />
         <option value="$PROJECT_DIR$/timentor/templates/timentor/main.html" />
         <option value="$PROJECT_DIR$/timentor/templates/timentor/list_daily_edit.html" />
         <option value="$PROJECT_DIR$/timentor/templates/timentor/list_daily_task_edit.html" />
+        <option value="$PROJECT_DIR$/timentor/forms.py" />
+        <option value="$PROJECT_DIR$/timentor/static/timentor/change_time.js" />
+        <option value="$PROJECT_DIR$/timentor/templates/timentor/common/base.html" />
+        <option value="$PROJECT_DIR$/timentor/static/timentor/js/change_time.js" />
         <option value="$PROJECT_DIR$/timentor/templates/timentor/new_todo_child.html" />
         <option value="$PROJECT_DIR$/timentor/templates/timentor/new_todo_parent.html" />
+        <option value="$PROJECT_DIR$/timentor/static/timentor/js/add_elements.js" />
+        <option value="$PROJECT_DIR$/timentor/static/timentor/js/jquery.formset.js" />
         <option value="$PROJECT_DIR$/timentor/models.py" />
+        <option value="$PROJECT_DIR$/timentor/views.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1374" />
-    <option name="y" value="56" />
+    <option name="x" value="1380" />
+    <option name="y" value="20" />
     <option name="width" value="1258" />
-    <option name="height" value="712" />
+    <option name="height" value="683" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -235,10 +163,6 @@
               <option name="myItemId" value="templates" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="timentor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -254,7 +178,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
+              <option name="myItemId" value="static" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -262,7 +186,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="common" />
+              <option name="myItemId" value="js" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -275,7 +199,12 @@
   <component name="PropertiesComponent">
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
-    <property name="SearchEverywhereHistoryKey" value="new_todo&#9;null&#9;null" />
+    <property name="SearchEverywhereHistoryKey" value="print&#9;null&#9;null&#10;new_todo&#9;null&#9;null" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/timentor/static/timentor/js" />
+    </key>
   </component>
   <component name="RunManager" selected="Python.views">
     <configuration default="false" name="views" type="PythonConfigurationType" factoryName="Python" temporary="true">
@@ -455,13 +384,13 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1374" y="56" width="1258" height="712" extended-state="0" />
+    <frame x="1380" y="20" width="1258" height="683" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13419564" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31774193" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33333334" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -476,6 +405,9 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.js" />
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
@@ -642,13 +574,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/timentor/tests.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/timentor/apps.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -670,33 +595,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/timentor/urls.py">
+    <entry file="file://$PROJECT_DIR$/timentor/templates/timentor/list_daily_edit.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="27" lean-forward="false" selection-start-line="12" selection-start-column="27" selection-end-line="12" selection-end-column="27" />
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="225">
+          <caret line="15" column="33" lean-forward="false" selection-start-line="15" selection-start-column="33" selection-end-line="15" selection-end-column="33" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/timentor/forms.py">
+    <entry file="file://$PROJECT_DIR$/timentor/templates/timentor/list_daily_task_edit.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="36" column="97" lean-forward="false" selection-start-line="36" selection-start-column="97" selection-end-line="36" selection-end-column="97" />
-          <folding>
-            <element signature="e#0#24#0" expanded="false" />
-          </folding>
+        <state relative-caret-position="-544">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="34" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/timentor/views.py">
+    <entry file="file://$PROJECT_DIR$/timentor/templates/timentor/main.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="18" lean-forward="true" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="18" />
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="-79">
+          <caret line="5" column="28" lean-forward="true" selection-start-line="5" selection-start-column="28" selection-end-line="5" selection-end-column="28" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -708,41 +627,67 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/timentor/templates/timentor/list_daily_edit.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="33" lean-forward="false" selection-start-line="15" selection-start-column="33" selection-end-line="15" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/timentor/templates/timentor/list_daily_task_edit.html">
+    <entry file="file://$PROJECT_DIR$/timentor/tests.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="34" />
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/timentor/templates/timentor/new_todo_child.html">
+    <entry file="file://$PROJECT_DIR$/timentor/templates/timentor/common/base.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="281">
-          <caret line="83" column="0" lean-forward="false" selection-start-line="83" selection-start-column="0" selection-end-line="83" selection-end-column="14" />
+        <state relative-caret-position="30">
+          <caret line="5" column="7" lean-forward="true" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="7" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/timentor/templates/timentor/new_todo_parent.html">
+    <entry file="file://$PROJECT_DIR$/timentor/static/timentor/js/add_elements.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="38" lean-forward="true" selection-start-line="18" selection-start-column="38" selection-end-line="18" selection-end-column="38" />
+        <state relative-caret-position="15">
+          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Library/Caches/PyCharmCE2016.3/python_stubs/776880377/builtins.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="131">
+          <caret line="475" column="4" lean-forward="false" selection-start-line="475" selection-start-column="4" selection-end-line="475" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/timentor/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="27" lean-forward="false" selection-start-line="12" selection-start-column="27" selection-end-line="12" selection-end-column="27" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/timentor/static/timentor/js/jquery.formset.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="122">
+          <caret line="67" column="59" lean-forward="false" selection-start-line="67" selection-start-column="59" selection-end-line="67" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/timentor/static/timentor/js/change_time.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-277">
+          <caret line="3" column="27" lean-forward="false" selection-start-line="3" selection-start-column="27" selection-end-line="3" selection-end-column="27" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/timentor/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
+        <state relative-caret-position="137">
           <caret line="32" column="0" lean-forward="true" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
           <folding>
             <element signature="e#0#28#0" expanded="true" />
@@ -750,19 +695,37 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/timentor/templates/timentor/common/base.html">
+    <entry file="file://$PROJECT_DIR$/timentor/templates/timentor/new_todo_parent.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="24" lean-forward="false" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
+        <state relative-caret-position="-649">
+          <caret line="7" column="37" lean-forward="true" selection-start-line="7" selection-start-column="37" selection-end-line="7" selection-end-column="37" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/timentor/templates/timentor/main.html">
+    <entry file="file://$PROJECT_DIR$/timentor/templates/timentor/new_todo_child.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="19" />
+        <state relative-caret-position="75">
+          <caret line="47" column="38" lean-forward="true" selection-start-line="47" selection-start-column="38" selection-end-line="47" selection-end-column="38" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/timentor/forms.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="27" column="112" lean-forward="true" selection-start-line="27" selection-start-column="112" selection-end-line="27" selection-end-column="112" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/timentor/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-238">
+          <caret line="68" column="32" lean-forward="true" selection-start-line="68" selection-start-column="32" selection-end-line="68" selection-end-column="32" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

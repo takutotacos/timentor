@@ -195,10 +195,23 @@
                     delCssSelector = $.trim(options.deleteCssClass).replace(/\s+/g, '.');
                 applyExtraClasses(row, formCount);
                 row.insertBefore(buttonRow).show();
+
+                // Get the instance of the last row right before pushing the add row button.
+                var last_row = $('.dynamic-form-add').prev().prev();
+                var taskDate = last_row.find($("input[name$='task_date']")).val();
+                // if a user does not specify the task_date, take default value
+                if(taskDate === '') {
+                    taskDate = row.prevObject["0"].childNodes[1].childNodes["0"].defaultValue;
+                }
+                var endTime = last_row.find($("select[name$='time_end']")).val();
+                row.find($("input[name$='task_date']")).val(taskDate);
+                row.find($("select[name$='time_start']")).val(endTime);
+
                 row.find(childElementSelector).each(function() {
                     updateElementIndex($(this), options.prefix, formCount);
                 });
                 totalForms.val(formCount + 1);
+                row.find($("select[name$='task_no']")).val(totalForms.val());
                 // Check if we're above the minimum allowed number of forms -> show all delete link(s)
                 if (showDeleteLinks()){
                     $('a.' + delCssSelector).each(function(){$(this).show();});

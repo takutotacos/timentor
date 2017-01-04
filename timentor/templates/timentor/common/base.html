@@ -13,7 +13,9 @@
         </ul>
         {% endblock %}
     </div>
-
+    {% if error_message %}
+        {{ error_message }}
+    {% endif %}
     <div id="content">
         {% block content %}{% endblock %}
     </div>

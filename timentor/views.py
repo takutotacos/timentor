@@ -1,6 +1,5 @@
 from django.shortcuts import render
-
-from django.http import HttpResponse, HttpResponseRedirect
+from django.http import HttpResponse, HttpResponseRedirect, Http404
 from django.urls import reverse
 from django.views import generic
 from django.contrib.auth.forms import AuthenticationForm
@@ -16,7 +15,12 @@ from django.shortcuts import get_list_or_404, get_object_or_404
 
 def main(request):
     today = datetime.now().strftime("%Y/%m/%d")
-    parent_tasks = get_list_or_404(ParentTask, task_date=today)
+    try:
+        parent_tasks = ParentTask.objects.get(task_date=today)
+    except ParentTask.DoesNotExist:
+        error_message = today + "'s task does not exist"
+        return render(request, 'timentor/main.html', {'today': today,
+                                                      'error_message': error_message})
     return render(request, 'timentor/main.html', {'parent_tasks': parent_tasks,
                                                   'today': today})
 
@@ -62,7 +66,6 @@ def new_todo_child(request, task_date, task_no):
     if request.method == 'POST':
         formset = ChildTaskFormSet(request.POST)
         if formset.is_valid():
-            print("The formset is valid")
             for form in formset:
                 cd = form.cleaned_data
                 child_task = ChildTask(task_no=cd['task_no'], task_name=cd['task_name'], time=cd['time'],

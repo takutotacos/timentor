@@ -21,7 +21,6 @@ class LoginForm(AuthenticationForm):
         self.fields['password'].widget.attrs['class'] = 'form-control'
 
 
-
 class ParentTaskForm(ModelForm):
     class Meta:
         model = ParentTask
