@@ -1,0 +1,29 @@
+{% extends "./common/base.html" %}
+
+{% block title %}Create Child Task{% endblock %}
+
+{% block content %}
+<h1>{{ today }}'s tasks</h1>
+<table>
+    <tbody>
+        <tr>
+            <td>No.</td>
+            <td>Task Name</td>
+            <td>Time</td>
+            <td>From</td>
+            <td>To</td>
+        </tr>
+        {% for task in parent_tasks %}
+        <tr>
+            <td>{{ task.task_no }}</td>
+            <td>{{ task.task_name }}</td>
+            <td>{{ task.time }}</td>
+            <td>{{ task.time_start }}</td>
+            <td>{{ task.time_end }}</td>
+            <td><a href="{% url 'timentor:main_child_tasks' task.task_no %}">
+                Go!</a></td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

@@ -1,10 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends "./common/base.html" %}
+
+{% block content %}
  {% load static %}
     {% if messages %}
         {% for message in messages %}
@@ -19,20 +15,16 @@
                 <td>No.</td>
                 <td>Task Name</td>
                 <td>Time</td>
-                <td>From(Hour)</td>
-                <td>From(Min)</td>
-                <td>To(Hour)</td>
-                <td>To(Min)</td>
+                <td>From</td>
+                <td>To</td>
             </tr>
             <tr>
                 <td>{{ parent_task.task_date }}</td>
                 <td>{{ parent_task.task_no }}</td>
                 <td>{{ parent_task.task_name }}</td>
                 <td>{{ parent_task.time }}</td>
-                <td>{{ parent_task.time_start_hour }}</td>
-                <td>{{ parent_task.time_start_min }}</td>
-                <td>{{ parent_task.time_end_hour }}</td>
-                <td>{{ parent_task.time_end_min }}</td>
+                <td>{{ parent_task.time_start }}</td>
+                <td>{{ parent_task.time_end }}</td>
             </tr>
         </tbody>
     </table>
@@ -44,10 +36,8 @@
                     <td>No.</td>
                     <td>Task Name</td>
                     <td>Time</td>
-                    <td>From(Hour)</td>
-                    <td>From(Min)</td>
-                    <td>To(Hour)</td>
-                    <td>To(Min)</td>
+                    <td>From</td>
+                    <td>To</td>
                     <td>Classification</td>
                 </tr>
                 {% for task in child_tasks %}
@@ -55,15 +45,12 @@
                     <td>{{ task.task_no }}</td>
                     <td>{{ task.task_name }}</td>
                     <td>{{ task.time }}</td>
-                    <td>{{ task.time_start_hour }}</td>
-                    <td>{{ task.time_start_min }}</td>
-                    <td>{{ task.time_end_hour }}</td>
-                    <td>{{ task.time_end_min }}</td>
+                    <td>{{ task.time_start }}</td>
+                    <td>{{ task.time_end }}</td>
                     <td>{{ task.classification }}</td>
                 </tr>
                 {% endfor %}
             </tbody>
         </table>
     </form>
-</body>
-</html>
+{% endblock %}

@@ -1,10 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends "./common/base.html" %}
+
+{% block content %}
+
     {% load static %}
     {% if messages %}
         {% for message in messages %}
@@ -21,10 +18,8 @@
                     <td>No.</td>
                     <td>Task Name</td>
                     <td>Time</td>
-                    <td>From(Hour)</td>
-                    <td>From(Min)</td>
-                    <td>To(Hour)</td>
-                    <td>To(Min)</td>
+                    <td>From</td>
+                    <td>To</td>
                 </tr>
                 {% for form in formset %}
                 <tr class="value_row">
@@ -50,10 +45,8 @@
                             {% endfor %}
                         {% endif %}
                     </td>
-                    <td>{{ form.time_start_hour }}</td>
-                    <td>{{ form.time_start_min }}</td>
-                    <td>{{ form.time_end_hour }}</td>
-                    <td>{{ form.time_end_min }}</td>
+                    <td>{{ form.time_start }}</td>
+                    <td>{{ form.time_end }}</td>
                 </tr>
                 {% endfor %}
             </tbody>
@@ -71,5 +64,4 @@
                 deleteText: 'delete'
             });
     </script>
-</body>
-</html>
+{% endblock %}

@@ -14,13 +14,21 @@ from django.contrib import messages
 from django.shortcuts import get_list_or_404, get_object_or_404
 
 
-class MainView(generic.ListView):
-    template_name = 'timentor/main.html'
-    context_object_name = 'task_list_for_today'
+def main(request):
+    today = datetime.now().strftime("%Y/%m/%d")
+    parent_tasks = get_list_or_404(ParentTask, task_date=today)
+    return render(request, 'timentor/main.html', {'parent_tasks': parent_tasks,
+                                                  'today': today})
 
-    # def get_queryset(self):
-    #     """Return the tasks for today"""
-    #     return ParentTask.objects.filter(task_date__e=)
+
+def main_child_tasks(request, task_no):
+    today = datetime.now().strftime("%Y/%m/%d")
+    parent_task = get_object_or_404(ParentTask, task_date=today, task_no=task_no)
+    child_tasks = get_list_or_404(ChildTask, parent_task=parent_task)
+    return render(request, 'timentor/main_child_tasks.html', {
+        'child_tasks': child_tasks,
+        'parent_task': parent_task
+    })
 
 
 def new_todo_parent(request):
@@ -32,10 +40,7 @@ def new_todo_parent(request):
             for form in formset:
                 cd = form.cleaned_data
                 parent_task = ParentTask(task_date=cd['task_date'], task_no=cd['task_no'], task_name=cd['task_name'],
-                                         time=cd['time'], time_start_hour=cd['time_start_hour'],
-                                         time_start_min=cd['time_start_min'],
-                                         time_end_hour=cd['time_end_hour'],
-                                         time_end_min=cd['time_end_min'])
+                                         time=cd['time'], time_start=cd['time_start'], time_end=cd['time_end'])
                 parent_task.save()
             messages.success(request, 'You have created the tasks')
             task_date_string = "".join(parent_task.task_date.split("/"))
@@ -61,8 +66,7 @@ def new_todo_child(request, task_date, task_no):
             for form in formset:
                 cd = form.cleaned_data
                 child_task = ChildTask(task_no=cd['task_no'], task_name=cd['task_name'], time=cd['time'],
-                                       time_start_hour=cd['time_start_hour'], time_start_min=cd['time_start_min'],
-                                       time_end_hour=cd['time_end_hour'], time_end_min=cd['time_end_min'],
+                                       time_start=cd['time_start'], time_end=cd['time_end'],
                                        classification=cd['classification'], parent_task=daily_task_with_task_no)
                 child_task.save()
                 return HttpResponseRedirect(reverse('timentor:list_daily_task_edit', args=(task_date, task_no)))
@@ -79,21 +83,18 @@ def new_todo_child(request, task_date, task_no):
 
 def list_daily_edit(request, task_date):
         task_date_string = task_date[:4] + "/" + task_date[4:6] + "/" + task_date[6:]
-        daily_tasks = get_list_or_404(ParentTask, task_date=task_date_string)
+        parent_tasks = get_list_or_404(ParentTask, task_date=task_date_string)
         return render(request, 'timentor/list_daily_edit.html', {
-            'daily_tasks': daily_tasks,
+            'parent_tasks': parent_tasks,
             'task_date': task_date
             })
 
 
 def list_daily_task_edit(request, task_date, task_no):
     task_date_string = task_date[:4] + "/" + task_date[4:6] + "/" + task_date[6:]
-    daily_task = get_object_or_404(ParentTask, task_date=task_date_string, task_no=task_no)
-    daily_child_task = get_list_or_404(ChildTask, parent_task=daily_task)
-    print(daily_child_task)
-    print("The one below is the parent task")
-    print(daily_task)
+    parent_task = get_object_or_404(ParentTask, task_date=task_date_string, task_no=task_no)
+    child_tasks = get_list_or_404(ChildTask, parent_task=parent_task)
     return render(request, 'timentor/list_daily_task_edit.html', {
-        'child_tasks': daily_child_task,
-        'parent_task': daily_task
+        'child_tasks': child_tasks,
+        'parent_task': parent_task
     })

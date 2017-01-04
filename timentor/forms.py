@@ -26,8 +26,7 @@ class ParentTaskForm(ModelForm):
     class Meta:
         model = ParentTask
         fields = [
-            'task_date', 'task_no', 'task_name', 'time', 'time_start_hour', 'time_start_min', 'time_end_hour',
-            'time_end_min', 'time_started_hour', 'time_started_min', 'time_ended_hour', 'time_ended_min',
+            'task_date', 'task_no', 'task_name', 'time', 'time_start', 'time_end', 'time_started', 'time_ended',
         ]
 
 
@@ -35,8 +34,7 @@ class ChildTaskForm(ModelForm):
     class Meta:
         model = ChildTask
         fields = [
-            'task_no', 'task_name', 'time', 'time_start_hour', 'time_start_min', 'time_end_hour',
-            'time_end_min', 'time_started_hour', 'time_started_min', 'time_ended_hour', 'time_ended_min',
+            'task_no', 'task_name', 'time', 'time_start', 'time_end', 'time_started', 'time_ended',
             'classification', 'parent_task'
         ]
 
