@@ -23,8 +23,8 @@
                 <td>{{ parent_task.task_no }}</td>
                 <td>{{ parent_task.task_name }}</td>
                 <td>{{ parent_task.time }}</td>
-                <td>{{ parent_task.time_start }}</td>
-                <td>{{ parent_task.time_end }}</td>
+                <td>{{ parent_task.get_time_start_display }}</td>
+                <td>{{ parent_task.get_time_end_display }}</td>
             </tr>
         </tbody>
     </table>
@@ -46,7 +46,7 @@
                     <td>{{ task.task_name }}</td>
                     <td>{{ task.time }}</td>
                     <td>{{ task.time_start }}</td>
-                    <td>{{ task.time_end }}</td>
+                    <td>{{ task.get_time_end_display }}</td>
                     <td>{{ task.classification }}</td>
                 </tr>
                 {% endfor %}

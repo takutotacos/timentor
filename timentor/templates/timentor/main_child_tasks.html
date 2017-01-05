@@ -12,13 +12,21 @@
             <td>Time</td>
             <td>From</td>
             <td>To</td>
+            <td>Start</td>
+            <td>End</td>
         </tr>
         <tr>
             <td>{{ parent_task.task_no }}</td>
             <td>{{ parent_task.task_name }}</td>
             <td>{{ parent_task.time }}</td>
-            <td>{{ parent_task.time_start }}</td>
-            <td>{{ parent_task.time_end }}</td>
+            <td>{{ parent_task.get_time_start_display }}</td>
+            <td>{{ parent_task.get_time_end_display }}</td>
+            <form method="post" action="">
+                {% csrf_token %}
+                <input type="hidden" name="started" value="0">
+                <td><input type="submit" value="Start"/></td>
+                <td><button>End</button></td>
+            </form>
         </tr>
     </tbody>
 </table>
@@ -32,15 +40,20 @@
             <td>Time</td>
             <td>From</td>
             <td>To</td>
+            <td>Start</td>
+            <td>End</td>
         </tr>
         {% for task in child_tasks %}
         <tr>
             <td>{{ task.task_no }}</td>
             <td>{{ task.task_name }}</td>
             <td>{{ task.time }}</td>
-            <td>{{ task.time_start}}</td>
-            <td>{{ task.time_end }}</td>
+            <td>{{ task.get_time_start_display }}</td>
+            <td>{{ task.get_time_end_display }}</td>
+            <td><button>Start</button></td>
+            <td><button>End</button></td>
         </tr>
+        {% endfor %}
     </tbody>
 </table>
 

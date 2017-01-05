@@ -61,8 +61,8 @@
                             {% endfor %}
                         {% endif %}
                     </td>
-                    <td>{{ form.time_start }}</td>
-                    <td>{{ form.time_end }}</td>
+                    <td>{{ form.get_time_start_display }}</td>
+                    <td>{{ form.get_time_end_display }}</td>
                     <td>{{ form.classification }}</td>
                 </tr>
                 {% endfor %}

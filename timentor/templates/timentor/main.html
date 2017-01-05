@@ -18,8 +18,8 @@
             <td>{{ task.task_no }}</td>
             <td>{{ task.task_name }}</td>
             <td>{{ task.time }}</td>
-            <td>{{ task.time_start }}</td>
-            <td>{{ task.time_end }}</td>
+            <td>{{ task.get_time_start_display }}</td>
+            <td>{{ task.get_time_end_display }}</td>
             <td><a href="{% url 'timentor:main_child_tasks' task.task_no %}">
                 Go!</a></td>
         </tr>

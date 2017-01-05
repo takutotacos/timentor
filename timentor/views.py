@@ -16,7 +16,7 @@ from django.shortcuts import get_list_or_404, get_object_or_404
 def main(request):
     today = datetime.now().strftime("%Y/%m/%d")
     try:
-        parent_tasks = ParentTask.objects.get(task_date=today)
+        parent_tasks = ParentTask.objects.filter(task_date=today)
     except ParentTask.DoesNotExist:
         error_message = today + "'s task does not exist"
         return render(request, 'timentor/main.html', {'today': today,
@@ -29,6 +29,11 @@ def main_child_tasks(request, task_no):
     today = datetime.now().strftime("%Y/%m/%d")
     parent_task = get_object_or_404(ParentTask, task_date=today, task_no=task_no)
     child_tasks = get_list_or_404(ChildTask, parent_task=parent_task)
+    if request.method == 'POST':
+        parent_task = ParentTask(id=parent_task.id, task_no=parent_task.task_no, task_date=parent_task.task_date,
+                                 time=parent_task.time, time_start=parent_task.time_start, time_end=parent_task.time_end,
+                                 task_name=parent_task.task_name, time_started=request.POST['started'])
+        parent_task.save()
     return render(request, 'timentor/main_child_tasks.html', {
         'child_tasks': child_tasks,
         'parent_task': parent_task
@@ -50,6 +55,7 @@ def new_todo_parent(request):
             task_date_string = "".join(parent_task.task_date.split("/"))
             return HttpResponseRedirect(reverse('timentor:list_daily_edit', args=(task_date_string,)))
         else:
+            print(formset.errors)
             messages.error(request, "You have something wrong with the tasks you made")
             return HttpResponseRedirect(reverse('timentor:new_todo_parent'))
     else:
